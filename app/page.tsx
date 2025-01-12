@@ -91,7 +91,7 @@ const CV = () => {
             <h3 className="text-lg font-bold text-gray-800 border-b-2 border-gray-300 mb-3">FEATURED PROJECTS</h3>
 
             {/* upscore.ai */}
-            <div className="mb-6">
+            <div className="mb-6 border-b-2 border-gray-300">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
                 <h4 className="text-md font-semibold text-gray-800">upscore.ai - AI-Powered IELTS Writing Assistant Platform</h4>
                 <div className="flex flex-col my-2">
@@ -105,7 +105,7 @@ const CV = () => {
                   </div>
                 </div>
               </div>
-              <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 ml-4">
+              <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 ml-4 mb-2">
                 <li>UpScore.ai is a comprehensive IELTS preparation platform that leverages artificial intelligence to help students improve their IELTS Writing Task 2 scores. Key features and achievements include:
                 </li>
                 <li>Developed an AI-powered essay evaluation system that provides instant, detailed feedback on IELTS essays, analyzing task achievement, coherence, vocabulary, and grammar according to official IELTS band descriptors
@@ -119,7 +119,7 @@ const CV = () => {
             </div>
 
             {/* SHRM Platform */}
-            <div className="mb-6">
+            <div className="mb-6 border-b-2 border-gray-300">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
                 <h4 className="text-md font-semibold text-gray-800">SHRM Exam Preparation Platform</h4>
                 <div className="flex flex-col my-2">
@@ -133,7 +133,7 @@ const CV = () => {
                   </div>
                 </div>
               </div>
-              <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 ml-4">
+              <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 ml-4 mb-2">
                 <li>Developed a comprehensive web application using Next.js 14 and TypeScript to help HR professionals prepare for SHRM-CP and SHRM-SCP certification exams</li>
                 <li>Implemented a modern, responsive UI with Tailwind CSS, featuring an interactive practice platform with 1000+ exam questions and detailed explanations</li>
                 <li>Integrated PWA (Progressive Web App) functionality for offline access and for desktop and mobile versions</li>
@@ -157,7 +157,7 @@ const CV = () => {
                   </div>
                 </div>
               </div>
-              <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 ml-4">
+              <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 ml-4 mb-2">
                 <li>Developed a full-stack application for automated expense tracking and VAT management</li>
                 <li>Integrated Claude AI for intelligent document analysis and data extraction</li>
                 <li>Implemented automated VAT calculations and compliance checks</li>
