@@ -2,7 +2,6 @@
 
 import { useReactToPrint } from 'react-to-print';
 import { RefObject, useEffect, useState } from 'react';
-import html2pdf from 'html2pdf.js';
 
 interface DownloadButtonProps {
     contentRef: RefObject<HTMLDivElement | null>;
@@ -23,6 +22,7 @@ const DownloadButton = ({ contentRef }: DownloadButtonProps) => {
 
     const handleMobileDownload = async () => {
         if (contentRef.current) {
+            const html2pdf = (await import('html2pdf.js')).default;
             const element = contentRef.current;
             const opt = {
                 margin: 10,
