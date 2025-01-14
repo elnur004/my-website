@@ -11,7 +11,11 @@ const DownloadButton = ({ contentRef }: DownloadButtonProps) => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
+        const checkMobile = () => {
+            const userAgent = navigator.userAgent || navigator.vendor;
+            return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+        };
+        setIsMobile(checkMobile());
     }, []);
 
     const handlePrint = useReactToPrint({
@@ -22,20 +26,39 @@ const DownloadButton = ({ contentRef }: DownloadButtonProps) => {
 
     const handleMobileDownload = async () => {
         if (contentRef.current) {
-            const html2pdf = (await import('html2pdf.js')).default;
-            const element = contentRef.current;
-            const opt = {
-                margin: 10,
-                filename: 'CV-Elnur.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
-
             try {
-                await html2pdf().set(opt).from(element).save();
+                const html2pdf = (await import('html2pdf.js')).default;
+                const element = contentRef.current;
+                const opt = {
+                    margin: 10,
+                    filename: 'CV-Elnur.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: {
+                        scale: 2,
+                        useCORS: true,
+                        logging: true
+                    },
+                    jsPDF: {
+                        unit: 'mm',
+                        format: 'a4',
+                        orientation: 'portrait',
+                        compress: true
+                    }
+                };
+
+                // Create a promise to handle the PDF generation
+                await new Promise((resolve, reject) => {
+                    html2pdf()
+                        .set(opt)
+                        .from(element)
+                        .save()
+                        .then(() => resolve(true))
+                        .catch((error) => reject(error));
+                });
+
             } catch (error) {
                 console.error('Error generating PDF:', error);
+                alert('Failed to generate PDF. Please try again.');
             }
         }
     };
