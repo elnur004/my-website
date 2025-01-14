@@ -33,22 +33,22 @@ const SkillLevel = ({ level }: { level: number }) => {
 
 const skills = {
   primary: [
-    { name: "React", level: 8 },
-    { name: "TypeScript", level: 7 },
-    { name: "Next.js", level: 8 },
-    { name: "JavaScript", level: 8 },
-    { name: "Tailwind CSS", level: 8 },
-    { name: "HTML 5", level: 8 },
-    { name: "CSS 3", level: 8 },
+    { name: "React", level: 7 },
+    { name: "TypeScript", level: 5 },
+    { name: "Next.js", level: 6 },
+    { name: "JavaScript", level: 7 },
+    { name: "Tailwind CSS", level: 6 },
+    { name: "HTML 5", level: 7 },
+    { name: "CSS 3", level: 7 },
   ],
   secondary: [
     { name: "MongoDB", level: 4 },
     { name: "Prisma ORM", level: 4 },
-    { name: "Git/Github", level: 7 },
-    { name: "React Router", level: 8 },
-    { name: "React Hooks", level: 8 },
-    { name: "Stripe", level: 7 },
-    { name: "NPM/Yarn", level: 7 },
+    { name: "Git/Github", level: 6 },
+    { name: "React Router", level: 6 },
+    { name: "React Hooks", level: 6 },
+    { name: "Stripe", level: 5 },
+    { name: "NPM/Yarn", level: 5 },
   ]
 };
 
