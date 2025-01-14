@@ -16,11 +16,41 @@ const LanguageBar = ({ level }: { level: number }) => {
   );
 };
 
-const skills = [
-  "HTML 5", "CSS 3", "JavaScript", "React", "React Hooks", "React Router",
-  "Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Git/Github", "NPM",
-  "Prisma ORM", "Stripe", "Yarn"
-];
+const SkillLevel = ({ level }: { level: number }) => {
+  const percentage = (level / 10) * 100;
+  return (
+    <div className="flex items-center space-x-2">
+      <div className="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div
+          className="h-full bg-gray-600 rounded-full"
+          style={{ width: `${percentage}%` }}
+        />
+      </div>
+      <span className="text-xs text-gray-500 w-8">{percentage}%</span>
+    </div>
+  );
+};
+
+const skills = {
+  primary: [
+    { name: "React", level: 8 },
+    { name: "TypeScript", level: 7 },
+    { name: "Next.js", level: 8 },
+    { name: "JavaScript", level: 8 },
+    { name: "Tailwind CSS", level: 8 },
+    { name: "HTML 5", level: 8 },
+    { name: "CSS 3", level: 8 },
+  ],
+  secondary: [
+    { name: "MongoDB", level: 4 },
+    { name: "Prisma ORM", level: 4 },
+    { name: "Git/Github", level: 7 },
+    { name: "React Router", level: 8 },
+    { name: "React Hooks", level: 8 },
+    { name: "Stripe", level: 7 },
+    { name: "NPM/Yarn", level: 7 },
+  ]
+};
 
 const CV = () => {
   const componentRef = useRef<HTMLDivElement>(null);
@@ -52,39 +82,61 @@ const CV = () => {
           <section className="mb-5">
             <h3 className="text-lg font-bold text-gray-800 border-b-2 border-gray-300 mb-3">PROFILE</h3>
             <p className="text-gray-700 leading-relaxed">
-              Three years ago, I began my coding journey—a decision I cherish and often wish I had made earlier. As a self-taught developer with a year and a half of professional experience at Yurik B.V - AI Solutions and Projects, I find immense joy in programming and strongly believe in its power to create meaningful change for individuals and society.
+              Three years ago, I began my coding journey—a decision I deeply cherish. As a self-taught developer with 1.5 years of experience at Yurik B.V - AI Solutions and Projects, I’ve developed a passion for programming and its potential to create meaningful change. At Yurik B.V., I worked closely with the project owner, Yura, who mentored me. While he focused on AI development, I designed and implemented intuitive front-end interfaces and contributed to the back-end, gaining hands-on experience with AI technologies and expanding my skills.
 
-              At Yurik B.V., I co-worked closely with the project owner Yura, who also served as my mentor. While he focused on developing the AI side of our projects, I was responsible for designing and implementing intuitive front-end interfaces and contributing partially to the back-end. This collaboration not only deepened my expertise in front-end development but also allowed me to gain hands-on experience working with AI technologies, expanding my technical skill set.
-
-              My core values include a passion for continuous learning, a strong work ethic, self-motivation, conscientiousness, and a deep sense of responsibility. I am currently seeking opportunities to contribute to impactful projects within a collaborative team, where I can enhance my skills and gain hands-on experience. You can explore some of my work on my <span className="font-bold">GitHub profile:</span> <a href="https://github.com/elnur004" target="_blank" className="text-blue-600 hover:text-blue-800">github.com/elnur004</a>
+              Driven by continuous learning, self-motivation, and a strong work ethic, I&apos;m eager to join a collaborative team to work on impactful projects. Explore my work on  <span className="font-bold">GitHub profile:</span> <a href="https://github.com/elnur004" target="_blank" className="text-blue-600 hover:text-blue-800">github.com/elnur004</a>
             </p>
           </section>
 
           {/* Skills Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
+          <h3 className="text-lg font-bold text-gray-800 border-b-2 border-gray-300 mb-3">
+            TECHNICAL SKILLS
+          </h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-6">
+            {/* Primary Skills Section */}
             <section>
-              <h3 className="text-lg font-bold text-gray-800 border-b-2 border-gray-300 mb-3">TECHNICAL SKILLS</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {skills.map((skill) => (
-                  <div key={skill} className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-600">
-                    {skill}
+              <div className="space-y-4">
+                <div>
+                  <div className="grid grid-cols-1 gap-2">
+                    {skills.primary.map((skill) => (
+                      <div key={skill.name} className="flex items-center justify-between bg-gray-100 px-3 py-2 rounded-lg">
+                        <span className="text-sm text-gray-600">{skill.name}</span>
+                        <SkillLevel level={skill.level} />
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </section>
 
-            <section>
-              <h3 className="text-lg font-bold text-gray-800 border-b-2 border-gray-300 mb-3">LANGUAGES</h3>
-              <div className="space-y-3">
-                {languages.map((language) => (
-                  <div key={language.name} className="flex justify-between items-center">
-                    <span className="text-gray-700">{language.name}</span>
-                    <LanguageBar level={language.level} />
+            {/* Secondary Skills and Languages Section */}
+            <div className="space-y-6">
+              <section>
+                <div>
+                  <div className="grid grid-cols-1 gap-2">
+                    {skills.secondary.map((skill) => (
+                      <div key={skill.name} className="flex items-center justify-between bg-gray-100 px-3 py-2 rounded-lg">
+                        <span className="text-sm text-gray-600">{skill.name}</span>
+                        <SkillLevel level={skill.level} />
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </section>
+                </div>
+              </section>
+            </div>
           </div>
+
+          <section className='mb-6'>
+            <h3 className="text-lg font-bold text-gray-800 border-b-2 border-gray-300 mb-3">LANGUAGES</h3>
+            <div className="space-y-3">
+              {languages.map((language) => (
+                <div key={language.name} className="flex justify-between items-center">
+                  <span className="text-gray-700">{language.name}</span>
+                  <LanguageBar level={language.level} />
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* Projects Section */}
           <section className="mb-6 md:mb-8">
