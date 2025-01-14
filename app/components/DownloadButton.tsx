@@ -20,39 +20,23 @@ const DownloadButton = ({ contentRef }: DownloadButtonProps) => {
         onAfterPrint: () => console.log('Printed successfully'),
     });
 
-    const handleMobileDownload = () => {
+    const handleMobileDownload = async () => {
         if (contentRef.current) {
-            const content = contentRef.current.innerHTML;
-            const blob = new Blob([`
-                <html>
-                    <head>
-                        <title>CV - Elnur</title>
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <style>
-                            body { 
-                                padding: 20px;
-                                font-family: Arial, sans-serif;
-                            }
-                            @media print {
-                                body { 
-                                    -webkit-print-color-adjust: exact;
-                                    print-color-adjust: exact;
-                                }
-                            }
-                        </style>
-                    </head>
-                    <body>${content}</body>
-                </html>
-            `], { type: 'text/html' });
+            const html2pdf = (await import('html2pdf.js')).default;
+            const element = contentRef.current;
+            const opt = {
+                margin: 10,
+                filename: 'CV-Elnur.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
 
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'CV-Elnur.html';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
+            try {
+                await html2pdf().set(opt).from(element).save();
+            } catch (error) {
+                console.error('Error generating PDF:', error);
+            }
         }
     };
 
@@ -65,7 +49,7 @@ const DownloadButton = ({ contentRef }: DownloadButtonProps) => {
                      sm:py-2 sm:px-4 text-sm sm:text-base
                      w-[calc(100%-2rem)] sm:w-auto sm:mx-0 z-10"
         >
-            Download CV
+            {isMobile ? 'Download PDF' : 'Download CV'}
         </button>
     );
 };
