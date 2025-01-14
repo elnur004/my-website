@@ -65,7 +65,7 @@ const CV = () => {
   return (
     <>
       <DownloadButton contentRef={componentRef} />
-      <main className="min-h-screen p-4 md:p-8">
+      <main className="p-4 md:p-8">
         <div ref={componentRef} className="max-w-4xl mx-auto bg-white p-4 md:p-8 shadow-lg">
           {/* Header Section */}
           <header className="text-center mb-4">

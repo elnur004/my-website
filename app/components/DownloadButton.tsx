@@ -36,13 +36,17 @@ const DownloadButton = ({ contentRef }: DownloadButtonProps) => {
                     html2canvas: {
                         scale: 2,
                         useCORS: true,
-                        logging: true
+                        logging: true,
+                        scrollY: -window.scrollY,
+                        windowHeight: document.documentElement.scrollHeight
                     },
                     jsPDF: {
                         unit: 'mm',
                         format: 'a4',
                         orientation: 'portrait',
-                        compress: true
+                        compress: true,
+                        enableLinks: true,
+                        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
                     }
                 };
 
