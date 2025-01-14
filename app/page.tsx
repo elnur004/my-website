@@ -44,7 +44,7 @@ const skills = {
   secondary: [
     { name: "MongoDB", level: 4 },
     { name: "Prisma ORM", level: 4 },
-    { name: "Git/Github", level: 6 },
+    { name: "Git/Github", level: 5 },
     { name: "React Router", level: 6 },
     { name: "React Hooks", level: 6 },
     { name: "Stripe", level: 5 },
