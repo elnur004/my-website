@@ -92,7 +92,7 @@ const CV = () => {
           <h3 className="text-lg font-bold text-gray-800 border-b-2 border-gray-300 mb-3">
             TECHNICAL SKILLS
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
             {/* Primary Skills Section */}
             <section>
               <div className="space-y-4">
@@ -126,7 +126,7 @@ const CV = () => {
             </div>
           </div>
 
-          <section className='mb-6'>
+          <section className='mb-8'>
             <h3 className="text-lg font-bold text-gray-800 border-b-2 border-gray-300 mb-3">LANGUAGES</h3>
             <div className="space-y-3">
               {languages.map((language) => (
