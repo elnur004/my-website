@@ -21,30 +21,38 @@ const DownloadButton = ({ contentRef }: DownloadButtonProps) => {
     });
 
     const handleMobileDownload = () => {
-        // Create a link to open in new tab for mobile devices
-        const printWindow = window.open('', '_blank');
-        if (printWindow && contentRef.current) {
-            printWindow.document.write(`
+        if (contentRef.current) {
+            const content = contentRef.current.innerHTML;
+            const blob = new Blob([`
                 <html>
                     <head>
                         <title>CV - Elnur</title>
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         <style>
-                            body { padding: 20px; }
+                            body { 
+                                padding: 20px;
+                                font-family: Arial, sans-serif;
+                            }
                             @media print {
-                                body { -webkit-print-color-adjust: exact; }
+                                body { 
+                                    -webkit-print-color-adjust: exact;
+                                    print-color-adjust: exact;
+                                }
                             }
                         </style>
                     </head>
-                    <body>
-                        ${contentRef.current.innerHTML}
-                        <script>
-                            window.onload = function() { window.print(); window.close(); }
-                        </script>
-                    </body>
+                    <body>${content}</body>
                 </html>
-            `);
-            printWindow.document.close();
+            `], { type: 'text/html' });
+
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'CV-Elnur.html';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
         }
     };
 
