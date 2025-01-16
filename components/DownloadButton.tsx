@@ -70,11 +70,11 @@ const DownloadButton = ({ contentRef }: DownloadButtonProps) => {
     return (
         <button
             onClick={isMobile ? handleMobileDownload : () => handlePrint()}
-            className="fixed sm:top-4  bottom-4 right-4 sm:bottom-auto 
+            className="fixed sm:top-20 bottom-4 right-4 sm:bottom-auto 
                      bg-blue-600 hover:bg-blue-700 text-white font-semibold 
                      py-2 px-4 rounded shadow transition-colors
                      sm:py-2 sm:px-4 text-sm sm:text-base
-                     w-[calc(100%-2rem)] sm:w-auto sm:mx-0 z-10"
+                     w-[calc(100%-2rem)] sm:w-auto sm:mx-0 z-60"
         >
             {isMobile ? 'Download PDF' : 'Download CV'}
         </button>
