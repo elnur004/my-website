@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 import Links from './Links';
 import ToggleButton from './ToggleButton';
+import logo from '@/public/logo.webp';
 
 
 export default function Navbar() {
@@ -18,7 +19,7 @@ export default function Navbar() {
                     <div className="w-full flex items-center justify-between">
                         <Link href="/" className="flex items-center justify-center text-xl font-bold text-slate-200 hover:text-slate-400 transition">
                                 <Image
-                                    src="/page-logo.webp"
+                                    src={logo}
                                     alt="Elnur Mammadov"
                                     width={100}
                                     height={100}
