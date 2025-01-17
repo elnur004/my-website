@@ -13,16 +13,16 @@ const Links = () => {
             return (
                 <>
                     <Link href="/about" className={linkStyle}>About Me</Link>
-                    <Link href="/cv" className={linkStyle}>CV</Link>
                     <Link href="/my-projects" className={linkStyle}>Projects</Link>
+                    <Link href="/cv" className={linkStyle}>CV</Link>
                 </>
             );
         case '/about':
             return (
                 <>
                     <Link href="/" className={linkStyle}>Home</Link>
-                    <Link href="/cv" className={linkStyle}>CV</Link>
                     <Link href="/my-projects" className={linkStyle}>Projects</Link>
+                    <Link href="/cv" className={linkStyle}>CV</Link>
                 </>
             );
         case '/cv':

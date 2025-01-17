@@ -32,21 +32,21 @@ export default function Home() {
             <ProjectCard
               title="upscore.ai"
               description="AI-Powered IELTS Writing Assistant Platform"
-              techStack={["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "OpenAI", "AI/ML", "PWA"]}
+              techStack={["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "OpenAI", "AI/ML", "PWA", "Vercel"]}
               githubUrl="https://github.com/elnur004/ielts"
               liveUrl="https://upscore.ai"
             />
             <ProjectCard
               title="SHRM Platform"
               description="Comprehensive SHRM Exam Preparation Platform"
-              techStack={["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "PDFKit", "PWA"]}
+              techStack={["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "PDFKit", "PWA", "Vercel"]}
               githubUrl="https://github.com/elnur004/shrm"
               liveUrl="https://shrm.upscore.ai"
             />
             <ProjectCard
               title="BoekieBot"
               description="AI-Powered Financial Management Platform"
-              techStack={["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "Claude AI", "NextAuth.js", "Stripe"]}
+              techStack={["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "Claude AI", "NextAuth.js", "Stripe", "Vercel"]}
               githubUrl="https://github.com/elnur004/boekiebot"
               liveUrl="https://boekiebot.nl"
             />

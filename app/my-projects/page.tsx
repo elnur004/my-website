@@ -28,7 +28,7 @@ const projects: Project[] = [
         ],
         githubUrl: "https://github.com/elnur004/ielts",
         liveUrl: "https://upscore.ai",
-        techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma ORM", "OpenAI", "PWA", "AI/ML"],
+        techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma ORM", "OpenAI", "PWA", "AI/ML", "Vercel"],
         imageUrl: upscore
     },
     {
@@ -41,7 +41,7 @@ const projects: Project[] = [
         ],
         githubUrl: "https://github.com/elnur004/shrm",
         liveUrl: "https://shrm.upscore.ai",
-        techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma ORM", "PDFKit", "PWA"],
+        techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma ORM", "PDFKit", "PWA", "Vercel"],
         imageUrl: shrm
     },
     {
@@ -56,7 +56,7 @@ const projects: Project[] = [
         ],
         githubUrl: "https://github.com/elnur004/boekiebot",
         liveUrl: "https://boekiebot.nl",
-        techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma ORM", "MongoDB", "Claude AI", "NextAuth.js", "Stripe"],
+        techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma ORM", "MongoDB", "Claude AI", "NextAuth.js", "Stripe", "Vercel"],
         imageUrl: boekiebot
     },
 ];
