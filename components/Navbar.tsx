@@ -16,18 +16,19 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex w-full flex-col sm:flex-row justify-between py-4 sm:h-16 items-center">
                     <div className="w-full flex items-center justify-between">
-                        <div className="flex items-center justify-center space-x-3">
-                            <Image
-                                src="/logo.svg"
-                                alt="Elnur Mammadov"
-                                width={70}
-                                height={70}
-                                style={{ width: '70px', height: '70px' }}
-                            />
-                            <Link href="/" className="text-xl font-bold text-slate-200 hover:text-slate-400 transition">
+                        <Link href="/" className="text-xl font-bold text-slate-200 hover:text-slate-400 transition">
+                            <div className="flex items-center justify-center">
+                                <Image
+                                    src="/page-logo.webp"
+                                    alt="Elnur Mammadov"
+                                    width={100}
+                                    height={100}
+                                    style={{ width: '70px', height: '40px' }}
+                                    className="mr-2"
+                                />
                                 Elnur Mammadov
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                         <ToggleButton toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
                     </div>
                     <div className="hidden w-full md:flex md:justify-end flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">

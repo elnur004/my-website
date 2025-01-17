@@ -90,6 +90,7 @@ export default function Projects() {
                                             alt={project.title}
                                             width={800}
                                             height={400}
+                                            priority
                                             className="rounded-xl border-2 border-gray-200 w-full h-auto object-cover"
                                         />
                                     )}
