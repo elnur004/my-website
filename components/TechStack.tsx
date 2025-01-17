@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { FaCcStripe } from "react-icons/fa";
 import { FaNpm } from "react-icons/fa";
-import { SiHtml5, SiCss3, SiReact, SiTypescript, SiJavascript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPrisma, SiGithub, SiReactrouter, SiYarn, SiPwa } from "react-icons/si";
+import { SiHtml5, SiCss3, SiReact, SiTypescript, SiJavascript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPrisma, SiGithub, SiReactrouter, SiYarn, SiPwa, SiVercel } from "react-icons/si";
 
 const technologies = [
   { name: "HTML5", level: 7, icon: <SiHtml5 className='text-red-600' /> },
@@ -21,7 +21,8 @@ const technologies = [
   { name: "Stripe", level: 5, icon: <FaCcStripe className='text-4xl' /> },
   { name: 'NPM', level: 5, icon: <FaNpm className='text-red-500 text-4xl' /> },
   { name: 'Yarn', level: 5, icon: <SiYarn className='text-violet-950' /> },
-  { name: 'Progressive Web App', level: 4, icon: <SiPwa className='text-white bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400' /> }
+  { name: 'Progressive Web App', level: 4, icon: <SiPwa className='text-white bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400' /> },
+  { name: 'Vercel', level: 5, icon: <SiVercel /> }
 ];
 
 export default function TechStack() {
