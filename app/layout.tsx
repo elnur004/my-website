@@ -28,6 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="theme-color" content="#020617" />
+        <meta name="description" content="Elnur Mammadov's Portfolio and CV" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
