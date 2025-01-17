@@ -80,7 +80,7 @@ export default function Projects() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+                            className="bg-slate-200 rounded-2xl shadow-xl overflow-hidden"
                         >
                             <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center p-8 gap-8">
                                 <div className="w-full lg:w-1/2">
