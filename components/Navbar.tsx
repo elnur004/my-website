@@ -13,11 +13,10 @@ export default function Navbar() {
 
     return (
         <nav className="md:fixed top-0 w-full bg-gradient-to-r from-[#020024] to-[#090979] backdrop-blur-sm z-50 shadow-sm">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex w-full flex-col sm:flex-row justify-between py-4 sm:h-16 items-center">
                     <div className="w-full flex items-center justify-between">
-                        <Link href="/" className="text-xl font-bold text-slate-200 hover:text-slate-400 transition">
-                            <div className="flex items-center justify-center">
+                        <Link href="/" className="flex items-center justify-center text-xl font-bold text-slate-200 hover:text-slate-400 transition">
                                 <Image
                                     src="/page-logo.webp"
                                     alt="Elnur Mammadov"
@@ -27,7 +26,6 @@ export default function Navbar() {
                                     className="mr-2"
                                 />
                                 Elnur Mammadov
-                            </div>
                         </Link>
                         <ToggleButton toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
                     </div>
