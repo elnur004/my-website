@@ -5,7 +5,6 @@ import Image from 'next/image';
 
 import Links from './Links';
 import ToggleButton from './ToggleButton';
-import logo from '@/public/logo.svg';
 
 
 export default function Navbar() {
@@ -19,7 +18,7 @@ export default function Navbar() {
                     <div className="w-full flex items-center justify-between">
                         <div className="flex items-center justify-center space-x-3">
                             <Image
-                                src={logo}
+                                src="/logo.svg"
                                 alt="Elnur Mammadov"
                                 width={70}
                                 height={70}
