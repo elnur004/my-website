@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 
 import { SiGithub, SiReaddotcv, SiLinkedin } from "react-icons/si";
 
-import elnur from '@/public/elnur.webp';
-
 import image1 from '@/public/assets/image1.jpg';
 import image2 from '@/public/assets/image2.jpg';
 import image3 from '@/public/assets/image3.jpg';
@@ -99,7 +97,7 @@ export default function HeroSection() {
           >
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
               <Image
-                src={elnur}
+                src="/elnur.webp"
                 alt="my photo"
                 fill
                 sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
