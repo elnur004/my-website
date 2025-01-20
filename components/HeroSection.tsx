@@ -19,6 +19,8 @@ const backgroundImages = [
   { image: image4, imageName: 'image4' },
 ];
 
+
+
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
