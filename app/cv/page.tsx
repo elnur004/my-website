@@ -75,6 +75,7 @@ const CV = () => {
               <a href="https://www.linkedin.com/in/elnur-mammadov-94530579/" className="flex items-center justify-center gap-2 text-gray-600 hover:text-blue-600">www.linkedin.com</a>
               <a href="mailto:lnur004@gmail.com" className="flex items-center justify-center gap-2 text-gray-600 hover:text-blue-600">lnur004@gmail.com</a>
               <a href="https://github.com/elnur004" target="_blank" className="text-gray-600 hover:text-blue-800">github.com/elnur004</a>
+              <a href="https://elnur004.github.io/my-website/" target="_blank" className="text-gray-600 hover:text-blue-800">elnur004.github.io/my-website/</a>
             </div>
           </header>
 

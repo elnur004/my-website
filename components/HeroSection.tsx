@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -78,12 +79,12 @@ export default function HeroSection() {
               >
                 <SiGithub className='mr-1 text-2xl'/> GitHub
               </a>
-              <a
+              <Link
                 href="/cv"
                 className="flex justify-center items-center border-2 border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-gray-900 transition"
               >
                <SiReaddotcv className='mr-1 text-2xl'/> View CV
-              </a>
+              </Link>
               <a
                 href="https://www.linkedin.com/in/elnur-mammadov-94530579/"
                 target="_blank"
