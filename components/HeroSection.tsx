@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import { SiGithub, SiReaddotcv, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiReaddotcv, SiLinkedin, SiGmail } from "react-icons/si";
 
 import elnur from '@/public/elnur.webp';
 
@@ -91,6 +91,12 @@ export default function HeroSection() {
                 className="flex justify-center items-center bg-white text-gray-900 px-6 py-3 rounded-md hover:bg-gray-200 transition"
               >
                 <SiLinkedin className='mr-1 text-2xl'/> Linkedin
+              </a>
+              <a
+                href="mailto:lnur004@gmail.com"
+                className="flex justify-center items-center border-2 border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-gray-900 transition"
+              >
+                <SiGmail className='mr-1 text-2xl'/> Gmail
               </a>
             </div>
           </motion.div>
