@@ -35,7 +35,7 @@ const skills = {
   primary: [
     { name: "React", level: 7 },
     { name: "TypeScript", level: 5 },
-    { name: "Next.js", level: 6 },
+    { name: "Next.js", level: 7 },
     { name: "JavaScript", level: 7 },
     { name: "Tailwind CSS", level: 6 },
     { name: "HTML 5", level: 7 },
