@@ -66,7 +66,7 @@ export default function HeroSection() {
             className="w-full md:w-1/2 text-center md:text-left"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold animate-color-animation mb-4">
-              Front-End Developer
+              Software Developer
             </h1>
             <p className="text-lg sm:text-xl text-gray-200 mb-8">
               Passionate about creating impactful web applications with modern technologies
