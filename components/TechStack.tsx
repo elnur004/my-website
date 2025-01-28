@@ -11,7 +11,7 @@ const technologies = [
   { name: "JavaScript", level: 7, icon: <SiJavascript className='text-yellow-300 bg-black' /> },
   { name: "React", level: 7, icon: <SiReact className='text-sky-400' /> },
   { name: "TypeScript", level: 5, icon: <SiTypescript className='text-sky-500' /> },
-  { name: "Next.js", level: 6, icon: <SiNextdotjs /> },
+  { name: "Next.js", level: 7, icon: <SiNextdotjs /> },
   { name: "Tailwind CSS", level: 6, icon: <SiTailwindcss className='text-sky-500' /> },
   { name: "MongoDB", level: 4, icon: <SiMongodb className='text-green-600' /> },
   { name: "Prisma ORM", level: 4, icon: <SiPrisma /> },
@@ -22,7 +22,7 @@ const technologies = [
   { name: 'NPM', level: 5, icon: <FaNpm className='text-red-500 text-4xl' /> },
   { name: 'Yarn', level: 5, icon: <SiYarn className='text-violet-950' /> },
   { name: 'Progressive Web App', level: 4, icon: <SiPwa className='text-white bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400' /> },
-  { name: 'Vercel', level: 5, icon: <SiVercel /> }
+  { name: 'Vercel', level: 10, icon: <SiVercel /> }
 ];
 
 export default function TechStack() {
