@@ -5,7 +5,7 @@ const CV = () => {
         {/* Download button and message for mobile */}
         <div className="block md:hidden w-full text-center mb-6">
           <a
-            href="/cv/ELNUR_MAMMADOV_CV.pdf"
+            href="/cv/CV_Elnur_Mammadov.pdf"
             download
             className="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition mb-2"
           >
