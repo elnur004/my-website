@@ -18,8 +18,8 @@ const CV = () => {
         {/* Embedded PDF for desktop/tablet only */}
         <div className="hidden md:block bg-white rounded shadow overflow-hidden w-full h-[70vh] md:h-[80vh] lg:h-[90vh]">
           <iframe
-            src="/cv/ELNUR_MAMMADOV_CV.pdf"
-            title="Elnur Mammadov CV"
+            src="/cv/CV_Elnur_Mammadov.pdf"
+            title="CV Elnur Mammadov"
             width="100%"
             height="100%"
             style={{ border: 'none', minHeight: '400px', minWidth: '100%', display: 'block' }}

@@ -10,8 +10,8 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/in/elnur-mammadov-94530579/" className="flex items-center justify-center gap-2 text-slate-200 hover:text-blue-600">
                         <SiLinkedin size={20} /> www.linkedin.com
                     </a>
-                    <a href="mailto:lnur004@gmail.com" className="flex items-center justify-center gap-2 text-slate-200 hover:text-blue-600">
-                        <Mail size={20} /> lnur004@gmail.com
+                    <a href="mailto:elnur.mammadov004@gmail.com" className="flex items-center justify-center gap-2 text-slate-200 hover:text-blue-600">
+                        <Mail size={20} /> elnur.mammadov004@gmail.com
                     </a>
                     <a href="https://github.com/elnur004" className="flex items-center justify-center gap-2 text-slate-200 hover:text-blue-600">
                         <SiGithub size={20} /> github.com

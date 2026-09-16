@@ -93,7 +93,7 @@ export default function HeroSection() {
                 <SiLinkedin className='mr-1 text-2xl'/> Linkedin
               </a>
               <a
-                href="mailto:lnur004@gmail.com"
+                href="mailto:elnur.mammadov004@gmail.com"
                 className="flex justify-center items-center border-2 border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-gray-900 transition"
               >
                 <SiGmail className='mr-1 text-2xl'/> Gmail
